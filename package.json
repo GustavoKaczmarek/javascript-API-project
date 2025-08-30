@@ -1,0 +1,19 @@
+{
+  "name": "javascript-api-project",
+  "version": "1.0.0",
+  "description": "Curso práctico de consumo de APIs con JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoKaczmarek/javascript-API-project.git"
+  },
+  "author": "@gustavoLegion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GustavoKaczmarek/javascript-API-project/issues"
+  },
+  "homepage": "https://github.com/GustavoKaczmarek/javascript-API-project#readme"
+}
