@@ -17,6 +17,7 @@ const lazyLoader = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             // console.log(entry.target.setAttribute)
             const url = entry.target.getAttribute('data-img')
+            // console.log(entry.target)
             entry.target.setAttribute('src', url);
         }
     });
@@ -41,6 +42,14 @@ function createMovies(movies, container, lazyLoad = false) {
             lazyLoad ? 'data-img' : 'src',
             'https://image.tmdb.org/t/p/w300' + movie.poster_path,
         );
+
+        movieImg.addEventListener('error', () => {
+            movieImg.setAttribute(
+                'src',
+                'https://static.platzi.com/static/images/error/img404.png'
+            );
+        })
+
 
         if (lazyLoad) {
             lazyLoader.observe(movieImg);
