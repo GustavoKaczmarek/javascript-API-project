@@ -59,7 +59,14 @@ function createMovies(
                 'src',
                 'https://static.platzi.com/static/images/error/img404.png'
             );
-        })
+        });
+
+        const movieBtn = document.createElement('button');
+        movieBtn.classList.add('movie-btn');
+        movieBtn.addEventListener('click', () => {
+            movie-btn.classList.toggle('movie-btn--liked');
+            // Deberiamos agregar la pelicula a LocStor
+        }); 
 
 
         if (lazyLoad) {
@@ -68,6 +75,7 @@ function createMovies(
 
 
         movieContainer.appendChild(movieImg);
+        movieContainer.appendChild(movieBtn);
         container.appendChild(movieContainer);
     });
 }
